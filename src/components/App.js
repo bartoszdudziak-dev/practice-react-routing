@@ -27,7 +27,8 @@ const App = () => {
                 <Route path='/task01' component={Task01}/>
                 <Route path='/task02' exact component={Task02}/>
                 <Route path='/task02/product-:id' component={Task02} />
-                <Route path='/task03' component={Task03}/>
+                <Route path='/task03' exact component={Task03}/>
+                <Route path='/task03/:category' component={Task03}/>
                 <Route path='/task04' component={Task04}/>
                 <Route path='/task05' component={Task05}/>
             </Switch>
