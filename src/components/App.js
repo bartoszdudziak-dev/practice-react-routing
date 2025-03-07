@@ -31,7 +31,8 @@ const App = () => {
                 <Route path='/task03/:category' component={Task03}/>
                 <Route path='/task04' exact component={Task04}/>
                 <Route path='/task04/:sortBy' component={Task04}/>
-                <Route path='/task05' component={Task05}/>
+                <Route path='/task05' exact component={Task05}/>
+                <Route path='/task05/:filters' component={Task05}/>
             </Switch>
         </Router>
     )
