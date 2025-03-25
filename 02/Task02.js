@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useParams, Link, Redirect } from "react-router-dom";
 import products from "../src/products.json";
 import Product from "../src/components/Product";
+import { URLContext } from "../src/components/App";
 
 const Task02 = () => {
   const { id } = useParams();
+  const { previousUrl } = useContext(URLContext);
 
   if (!id)
     return (
@@ -27,7 +29,7 @@ const Task02 = () => {
     <>
       <h1>Task02</h1>
       <Product {...product} />
-      <Link to="/task02">Go Back</Link>
+      <Link to={previousUrl}>Go Back</Link>
     </>
   );
 };
